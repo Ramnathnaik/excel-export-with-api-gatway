@@ -1,0 +1,52 @@
+<!--
+  This project is for Tableau Excel download
+  Product developed by LTIMindtree
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>CPB</title>
+
+  <!-- Include the Tableau Extensions library so we can communicate with Tableau -->
+  <script src="./lib/tableau.extensions.1.latest.js" async></script>
+
+  <!-- Include our own style sheets and javascript code -->
+  <script src="./script-01.js" async></script>
+  <!-- <script src="./jszip.js"></script> -->
+  <script src="./xlsx.js" async></script>
+  <script type="text/javascript" src="./jquery.min.js"></script>
+
+</head>
+
+<body>
+	<!-- <button type="submit" id="demo" class="buttonForDownload" style="width: auto; height: auto;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;">
+  <img src="./Logo.jpg" alt="buttonpng" style="height: 35px;"/></button> -->
+  <button type="submit" id="demo" class="buttonForDownload">Add</button>&nbsp;&nbsp;
+  <!-- <button type="submit" id="download" >Download</button> -->
+  <!-- <script>
+    alert();
+  </script> -->
+  <script>
+		$(document).ready(function() {
+      if (!$('.content-main', window.top.document.body).hasClass('content-main')) {
+        $(window.top.document.body).append('<div id="content-main" class="content-main"></div>');
+      }
+      
+			$('#content-main', window.top.document).load("tableau-tmp.html");
+		});
+	</script>
+</body>
+
+</html>
